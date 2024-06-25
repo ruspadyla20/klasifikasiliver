@@ -77,7 +77,7 @@ conf_matrix = confusion_matrix(y_test, knn.predict(X_test))
 st.write("Confusion Matrix:", conf_matrix)
 
 # Classification Report
-class_report = classification_report_imbalanced(y_test, knn.predict(X_test))
+class_report = classification_report(y_test, knn.predict(X_test))
 st.write("Classification Report:", class_report)
 
 # Accuracy Score
