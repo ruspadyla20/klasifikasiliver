@@ -4,7 +4,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
-
+from imblearn.metrics import classification_report_imbalanced
 # Judul Aplikasi
 st.title("Aplikasi Prediksi Penyakit Liver")
 
@@ -77,7 +77,7 @@ conf_matrix = confusion_matrix(y_test, knn.predict(X_test))
 st.write("Confusion Matrix:", conf_matrix)
 
 # Classification Report
-class_report = classification_report(y_test, knn.predict(X_test))
+class_report = classification_report_imbalanced(y_test, knn.predict(X_test))
 st.write("Classification Report:", class_report)
 
 # Accuracy Score
