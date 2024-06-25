@@ -4,7 +4,6 @@ from sklearn.model_selection import train_test_split
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
-from imblearn.metrics import classification_report_imbalanced
 
 # Judul Aplikasi
 st.title("Aplikasi Prediksi Penyakit Liver")
